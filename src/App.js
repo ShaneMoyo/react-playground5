@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Increment from './components/Increment'; 
+import Gists from './components/gists/Gists'; 
 import { 
   BrowserRouter as Router,
   Switch,
@@ -21,10 +22,14 @@ function App() {
             <li>
               <Link to="/increment">Increment</Link>
             </li>
+            <li>
+              <Link to="/gists">Gists</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
           <Route path="/increment" component={Increment}/>
+          <Route path="/gists" component={Gists}/>
           <Route path="/" component={Home}/>
         </Switch>
       </Router> 
